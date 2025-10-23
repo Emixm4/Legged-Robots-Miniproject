@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "njpwerner.autodocstring",
+        "aaron-bond.better-comments",
+        "eamodio.gitlens",
+        "KevinRose.vsc-python-indent",
+        "yzhang.markdown-all-in-one"
+    ]
+}
