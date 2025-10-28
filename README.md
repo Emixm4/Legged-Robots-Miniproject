@@ -71,9 +71,46 @@ pip install -r requirements.txt
 conda install conda-forge::pybullet
 ```
 
-## Running the code
+## Running the Code
 
+### File: `quadruped_jump.py`
 
+This file implements the jumping controller using the optimized parameters.  
+It launches the simulation of the different optimized jump types.  
+When executed, the program will prompt the user to specify the desired jump type through command-line arguments.
+
+```bash
+# Example: start the simulation of a front jump
+python quadruped_jump.py Front_jump
+```
+#### Arguments
+
+Different jump types can be specified as command-line arguments when launching the script.  
+The available options are:
+
+- `Front_jump` – Performs a standard forward jump.  
+- `Front_jump_s` – Executes forward jump maximising the speed.  
+- `Side_jump_L` – Performs a lateral jump to the left.  
+- `Side_jump_R` – Performs a lateral jump to the right.  
+- `Cw_twist` – Executes clockwise jumps.
+- `Ccw_twist` – Executes counterclockwise jumps.
+
+Each option corresponds to a specific optimized jump configuration designed for stability and performance after testing.
+
+### File: `quadruped_jump.py`
+This file implements differents optimisations function for each type of jump. When executed, the program will prompt the user to specify the optimisation type through command-line arguments.
+```bash
+# Example: start the optimisation for all the gains value in the case of a vertical jump 
+python quadruped_jump_opt.py opt_stab
+```
+### Arguments 
+Different optimisation can be specified as command-line arguments when launching the script.  
+The available options are:
+- `opt_stab` – Optimise gains for small verticals jumps.
+- `opt_front` – Optimise jump profile parameters for front jumps.
+- `opt_side` – Optimise jump profile parameters for a side jump.
+- `opt_twist` – Optimise jump profile parameters for a twist jump (inverted for the other side). 
+- `opt_speed` – Optimise the speed in the x axis for forwrd jumps.
 
 ## Members
 LUYET Maxime <br>
